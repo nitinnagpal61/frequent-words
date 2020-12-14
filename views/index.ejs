@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Express HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 25%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="margin:100px;">
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Express HTML</a>
+      </div>
+    </nav>
+    <div class="jumbotron" style="padding:40px;">
+      <h1>Word Frequency App!</h1>
+      <p>Finds the top 10 frquency words by crawling through the url and its inner links.</p>
+      <table>
+        <tr>
+          <th>Word</th>
+          <th>Count</th>
+        </tr>
+
+        <% words.forEach((word) => { %>
+          <tr>
+            <td> <%= word.word %></td>
+            <td><%= word.count %></td>
+          </tr>
+          <% }); %>
+        
+        
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
